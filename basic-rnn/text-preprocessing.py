@@ -96,7 +96,7 @@ def load_corpus_time_machine(filename='../data/timemachine.txt', max_tokens=-1):
 
 
 if __name__ == '__main__':
-    filename = r'..\data\timemachine.txt'
+    filename = r'../../data/timemachine.txt'
     corpus, vocab = load_corpus_time_machine(filename)
     print(len(corpus))
     print(len(vocab))

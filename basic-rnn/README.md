@@ -24,7 +24,7 @@ RNN是对隐变量进行循环计算的网络
 常常使用困惑度来衡量语言模型的质量
 使用了 grid_clip，但是注意和 torch.cuda.amp 的冲突性 
 
-- rnn-scratch:
+- rnn-scratch:  
 注意这个 .T 转置
 predict 需要进行预热处理，并且设置 batch_size=1
 有趣的是，我们仅仅是在数据集获取dataloader时候，强调了 num_step 
@@ -32,6 +32,6 @@ predict 需要进行预热处理，并且设置 batch_size=1
 当使用顺序划分时，我们需要分离梯度以减少计算量。
 离谱的是 BCE 需要 Softmax，BCEWithLogitsLoss 不需要 Softmax， CrossEntropyLoss 也不需要Softmax
 
-- rnn-concise:
+- rnn-concise:  
 主要是使用了 nn.rnn, 然后在该层的基础上，加入输出层次
 一定呀注意input和output的形状，对应我们损失函数的情况

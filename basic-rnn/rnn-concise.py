@@ -4,9 +4,7 @@ import torch.nn.functional as F
 import d2l.torch as d2l
 
 import config
-import numpy as np
 from tqdm import tqdm
-import matplotlib.pyplot as plt
 
 
 class RNN(nn.Module):
