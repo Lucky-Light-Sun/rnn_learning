@@ -34,4 +34,6 @@ predict 需要进行预热处理，并且设置 batch_size=1
 
 - rnn-concise:  
 主要是使用了 nn.rnn, 然后在该层的基础上，加入输出层次
-一定呀注意input和output的形状，对应我们损失函数的情况
+一定呀注意input和output的形状，对应我们损失函数的情况，
+而且我们forward函数中，不需要进行 num_step 的循环遍历了
+H 隐藏变量初始化的时候需要多加入一维，`层数`
